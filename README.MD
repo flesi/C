@@ -1,18 +1,33 @@
 [1. Estructura básica de un programa en C](#1)
+
 [2. Tipos de datos básicos](#2)
+
 [3. Modificadores de tipo](#3)
+
 [4. Operadores básicos](#4)
+
 [5. Control de flujo](#5)
+
 [6. Funciones](#6)
+
 [7. Arreglos](#7)
+
 [8. Punteros](#8)
+
 [9. E/S básica](#9)
+
 [10. Estructuras (struct)](#10)
+
 [11. Manejo de memoria dinámica](#11)
+
 [12. Archivos](#12)
+
 [13. Macros y constantes](#13)
+
 [14. Manejo de errores con errno](#14)
+
 [15. Compilación](#15)
+
 [16. Bibliotecas estándar útiles](#16)
 
 
