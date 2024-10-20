@@ -1,24 +1,24 @@
-1. Estructura básica de un programa en C
-2. Tipos de datos básicos
-3. Modificadores de tipo
-4. Operadores básicos
-5. Control de flujo
-6. Funciones
-7. Arreglos
-8. Punteros
-9. E/S básica
-10. Estructuras (struct)
-11. Manejo de memoria dinámica
-12. Archivos
-13. Macros y constantes
-14. Manejo de errores con errno
-15. Compilación
-16. Comentarios
-17. Bibliotecas estándar útiles
+[1. Estructura básica de un programa en C](#1)
+[2. Tipos de datos básicos](#2)
+[3. Modificadores de tipo](#3)
+[4. Operadores básicos](#4)
+[5. Control de flujo](#5)
+[6. Funciones](#6)
+[7. Arreglos](#7)
+[8. Punteros](#8)
+[9. E/S básica](#9)
+[10. Estructuras (struct)](#10)
+[11. Manejo de memoria dinámica](#11)
+[12. Archivos](#12)
+[13. Macros y constantes](#13)
+[14. Manejo de errores con errno](#14)
+[15. Compilación](#15)
+[16. Bibliotecas estándar útiles](#16)
 
 
 
 
+<div id='1'></div>
 
 # 1. Estructura básica de un programa en C:
 
@@ -38,6 +38,9 @@ int main() {
 
 - `return 0;`: Esto indica que el programa finalizó correctamente. Retornar un valor en la función `main()` es opcional en algunos compiladores modernos, pero es una buena práctica.
 
+
+<div id='2'></div>
+
 # 2. Tipos de datos básicos:
 
 El lenguaje C cuenta con una serie de tipos de datos primitivos que puedes utilizar para almacenar valores. Los tipos de datos varían en tamaño y rango, lo cual es importante para la optimización del uso de memoria.
@@ -56,6 +59,7 @@ El lenguaje C cuenta con una serie de tipos de datos primitivos que puedes utili
 - `char`: Utilizado para almacenar caracteres simples o enteros pequeños. Normalmente ocupa 1 byte.
 - `void`: No almacena valores, y se usa en funciones que no necesitan devolver ningún valor.
 
+<div id='3'></div>
 
 # 3. Modificadores de tipo:
 
@@ -72,9 +76,27 @@ unsigned int x = 50000;  // Solo números positivos
 long long int y = 100000000000;  // Gran rango de números enteros
 ```
 
+<div id='4'></div>
 
 # 4. Operadores básicos:
 C utiliza una variedad de operadores para realizar cálculos y comparaciones entre valores. Estos operadores son similares a los encontrados en otros lenguajes de programación.
+| Operador  | Descripción                   | Ejemplo   |
+|-----------|-------------------------------|-----------|
+| `+`       | Suma                          | `a + b`   |
+| `-`       | Resta                         | `a - b`   |
+| `*`       | Multiplicación                | `a * b`   |
+| `/`       | División                      | `a / b`   |
+| `%`       | Módulo                        | `a % b`   |
+| `++`      | Incremento                    | `a++`     |
+| `--`      | Decremento                    | `a--`     |
+| `==`      | Igualdad                      | `a == b`  |
+| `!=`      | Desigualdad                   | `a != b`  |
+| `> / <`   | Mayor / Menor que             | `a > b`   |
+| `>= / <=` | Mayor o igual / Menor o igual | `a<=b`    |
+
+
+
+<div id='5'></div>
 
 # 5. Control de flujo:
 Los bloques de control de flujo permiten alterar la secuencia en que se ejecutan las instrucciones en un programa.
@@ -138,6 +160,8 @@ Los bucles permiten ejecutar repetidamente un bloque de código.
         ```
 
 
+<div id='6'></div>
+
 # 6. Funciones:
 Las funciones permiten dividir el código en bloques reutilizables. Cada función tiene un tipo de retorno y puede aceptar parámetros de entrada.
 ```c
@@ -147,6 +171,7 @@ tipo_retorno nombre_funcion(tipo1 arg1, tipo2 arg2) {
 }
 ```
 <b>Ejemplo:</b>
+
 ```c
 int sumar(int a, int b) {
     return a + b;
@@ -157,9 +182,12 @@ int main() {
     printf("Resultado: %d", resultado);
 }
 ```
+
 - <b>Parámetros:</b> Son las entradas que la función espera. En este caso, `sumar()` recibe dos enteros y devuelve su suma.
 - <b>Tipo de retorno:</b> En este ejemplo, el tipo de retorno es `int`, ya que la función devuelve un número entero.
 
+
+<div id='7'></div>
 
 # 7. Arreglos:
 
@@ -183,6 +211,7 @@ Los arreglos multidimensionales permiten crear estructuras más complejas, como 
     ```
 
 
+<div id='8'></div>
 
 # 8. Punteros:
 Un puntero es una variable que almacena la dirección de otra variable. Son una característica fundamental de C y permiten manipular directamente la memoria.
@@ -207,6 +236,9 @@ void cambiar_valor(int *p) {
 }
 ```
 
+
+<div id='9'></div>
+
 # 9. E/S básica:
 C ofrece funciones estándar para realizar operaciones de entrada y salida, como leer del teclado y escribir en la pantalla.
 
@@ -227,6 +259,10 @@ scanf("%d", &edad);
 ```
 `scanf` permite leer datos desde el teclado y almacenarlos en una variable. Es importante usar el símbolo `&` para pasar la dirección de la variable donde se almacenará el valor.
 
+
+
+<div id='10'></div>
+
 # 10. Estructuras (`struct`):
 Una estructura (`struct`) permite agrupar varios tipos de datos bajo un mismo nombre.
 
@@ -244,6 +280,8 @@ struct Persona p1 = {"Juan", 25};
 printf("%s tiene %d años.", p1.nombre, p1.edad);
 ```
 
+<div id='11'></div>
+
 # 11. Manejo de memoria dinámica:
 C proporciona funciones para gestionar la memoria de manera dinámica, lo que permite asignar y liberar memoria durante la ejecución del programa.
 
@@ -257,9 +295,92 @@ if (p == NULL) {
 free(p);  // Liberar la memoria asignada
 ```
 
-# 12. Archivos:
-# 13. Macros y constantes:
-# 14. Manejo de errores con errno:
-# 15. Compilación:
-# 16. Comentarios:
-# 17. Bibliotecas estándar útiles:
+
+<div id='12'></div>
+
+# 12. Archivos
+
+El lenguaje C también permite trabajar con archivos, abriéndolos, escribiendo en ellos y leyendo de ellos.
+
+<b>Apertura y cierre de archivos:</b>
+```c
+FILE *archivo = fopen("datos.txt", "r");
+if (archivo == NULL) {
+    printf("Error al abrir el archivo.");
+}
+fclose(archivo);
+```
+- `fopen()`: Abre un archivo. Los modos comunes son r (lectura), w (escritura), y a (adjuntar).
+- `fclose()`: Cierra el archivo para liberar recursos.
+
+Escritura y lectura en archivos:
+```c
+FILE *archivo = fopen("datos.txt", "w");
+fprintf(archivo, "Escribiendo en el archivo.\n");
+fclose(archivo);
+```
+
+- `fprintf()`: Similar a `printf()`, pero escribe en un archivo en lugar de en la consola.
+
+
+
+<div id='13'></div>
+
+# 13. Macros y constantes
+Las macros son fragmentos de código que se expanden antes de la compilación. Las constantes, por otro lado, son valores fijos que no cambian.
+
+<b>Definición de macros:</b>
+```c
+#define PI 3.14159
+#define AREA_CIRCULO(r) (PI * (r) * (r))
+```
+- `#define`: Se utiliza para definir macros, que son fragmentos de código que el preprocesador sustituye antes de compilar el programa.
+
+<b>Uso de `const`:</b>
+
+```c
+const int MAX = 100;
+```
+
+
+<div id='14'></div>
+
+# 14. Manejo de errores con `errno`
+C proporciona la variable global errno para detectar errores al ejecutar operaciones del sistema, como abrir archivos o asignar memoria.
+```c
+#include <errno.h>
+#include <string.h>
+
+FILE *archivo = fopen("archivo.txt", "r");
+if (archivo == NULL) {
+    printf("Error: %s\n", strerror(errno));  // Imprime el error
+}
+```
+- `errno`: Variable que almacena el código de error.
+- `strerror()`: Convierte un código de error en un mensaje legible.
+
+
+
+<div id='15'></div>
+
+# 15. Compilación
+Una vez que escribes tu programa en C, debes compilarlo para convertirlo en un archivo ejecutable. Para ello se usa un compilador como gcc.
+
+<b>Para compilar en Linux o MacOS:</b>
+```bash
+gcc programa.c -o programa
+./programa
+```
+<b>Para compilar en Windows:</b>
+```bash
+gcc programa.c -o programa.exe
+programa.exe
+```
+# 16. Bibliotecas estándar útiles
+C cuenta con una amplia gama de bibliotecas estándar que ofrecen funciones para diversas operaciones.
+
+- `<stdio.h>`: Entrada y salida estándar (funciones como `printf` y `scanf`).
+- `<stdlib.h>`: Funciones de utilidad, conversión de tipos, memoria dinámica, control de procesos.
+- `<string.h>`: Funciones para manipulación de cadenas, como `strlen`, `strcpy`, y `strcmp`.
+- `<math.h>`: Funciones matemáticas como `sqrt()`, `pow()`, y `sin()`.
+- `<time.h>`: Funciones para manipular y obtener el tiempo actual.
